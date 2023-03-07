@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { useRandomDogsData } from '../api/use.random-dog-data.hook';
-import { Spinner } from 'flowbite-react';
+import { useRandomDogsData } from '../api/use-random-dog-data.hook';
+import { v1 } from 'uuid';
 import { DogCard } from '../components/dog-card.component';
 import { Button } from '../components/button.component';
+import { Skeleton } from '../components/skeleton.component';
 
 interface HomePageProps {}
 
@@ -15,7 +16,15 @@ export const HomePage: FC<HomePageProps> = ({}) => {
   }
 
   if (isLoading) {
-    return <div className="text-center">Loading...</div>;
+    return (
+      <div className="p-8 relative">
+        <div className="flex flex-wrap gap-16 justify-center mb-8">
+          {Array.from({ length: 8 }, (_, i) => (
+            <Skeleton key={v1()} />
+          ))}
+        </div>
+      </div>
+    );
   }
 
   if (!data) {
@@ -24,13 +33,13 @@ export const HomePage: FC<HomePageProps> = ({}) => {
 
   return (
     <div className="p-8 relative">
-      <div className="flex flex-wrap gap-8 justify-center mb-8">
+      <div className="flex flex-wrap gap-10 justify-center mb-8">
         {data.pages.map((page) => {
           return page.map((data) => (
             <DogCard
               key={data.id}
               image={data.url}
-              name={data.breeds.map((b) => b.name).join(',') || 'Cute cats'}
+              name={data.breeds.map((b) => b.name).join(',') || 'Cute dogs'}
               dogId={data.id}
             />
           ));

@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import { FC, MouseEventHandler } from 'react';
+import { useSearchParams } from 'react-router-dom';
 
 interface DogCardProps {
   image: string;
@@ -7,9 +8,19 @@ interface DogCardProps {
 }
 
 export const DogCard: FC<DogCardProps> = ({ image, name, dogId }) => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const setDogParam: MouseEventHandler<HTMLElement> = (e) => {
+    e.preventDefault();
+
+    setSearchParams({
+      dog: dogId,
+    });
+  };
+
   return (
     <div className="w-72 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
-      <a className="text-center">
+      <a className="text-center" onClick={setDogParam}>
         <img
           className="rounded-t-lg"
           src={image}

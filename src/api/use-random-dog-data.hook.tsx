@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useInfiniteQuery } from 'react-query';
 import { api } from '../core/api';
-import { GetRandomDogsDto } from './dto/get-random-cats.dto';
+import { GetRandomDogsDto } from './dto/get-random-dogs.dto';
 
 interface GetRandomDogsParams {
   pageParam: number;
@@ -11,7 +11,7 @@ interface GetRandomDogsParams {
 const getRandomDogs = async ({ pageParam = 0, breedId }: GetRandomDogsParams) => {
   const { data } = await api.get<GetRandomDogsDto>('https://api.thedogapi.com/v1/images/search', {
     params: {
-      limit: 10,
+      limit: 8,
       pageParam,
       breed_ids: breedId,
     },
