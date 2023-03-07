@@ -21,19 +21,25 @@ export const DogModal: FC<DogModalProps> = ({}) => {
     setSearchParams({});
   };
 
+  if (isError) {
+    return <div>Oops, something wrong happend</div>;
+  }
+
   return (
     <>
-      <Modal show={isOpened} onClose={closeModal} className="h-screen">
+      <Modal show={isOpened} onClose={closeModal}>
         <Modal.Header>
-          {isLoading ? 'Loading...' : data?.breeds?.map((b) => b.name).join(',') || 'Cute kitty'}
+          {isLoading ? 'Loading...' : data?.breeds?.map((b) => b.name).join(',') || 'Cute dog'}
         </Modal.Header>
         <Modal.Body>
-          <div className="flex flex-col gap-6">
-            {data?.url && <img src={data?.url} width="500px" height="500px" />}
-            {data?.breeds && (
+          <div className="flex flex-col gap-6 justify-center items-center p-3">
+            {data?.url && <img src={data?.url} />}
+            {data?.breeds ? (
               <>
                 <p className="p-5">{data.breeds[0].temperament}</p>
               </>
+            ) : (
+              <p>No temperament</p>
             )}
           </div>
         </Modal.Body>

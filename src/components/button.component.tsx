@@ -14,7 +14,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
   size,
 }) => {
   return (
-    <ButtonFlowbite onClick={onClick} disabled={isLoading} size={size} className="px-3">
+    <ButtonFlowbite onClick={onClick} disabled={isLoading} size={size}>
       {isLoading ? (
         <>
           <div className="mr-3">
