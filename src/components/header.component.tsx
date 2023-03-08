@@ -13,6 +13,9 @@ export const Header: FC<HeaderProps> = ({}) => {
       <Link to="/breed" className="hover:text-red-700">
         Breeds
       </Link>
+      <Link to="/favorite" className="hover:text-red-700">
+        Favorite
+      </Link>
     </nav>
   );
 };

@@ -22,7 +22,7 @@ export const DogCard: FC<DogCardProps> = ({ image, name, dogId }) => {
     <div className="w-72 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col justify-between">
       <a className="text-center" onClick={setDogParam}>
         <img
-          className="rounded-t-lg"
+          className="rounded-t-lg cursor-pointer"
           src={image}
           alt=""
           style={{ height: '200px', width: '100%', objectFit: 'contain' }}
