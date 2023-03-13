@@ -8,7 +8,7 @@
 
 ## Использованные библиотеки и технологии:
 
-React Query, Flowbite, React Router, Axios, Tailwind, uuid
+@tanstack/react-query, Flowbite, React Router, Axios, Tailwind, uuid
 
 ## Как работает проект
 
