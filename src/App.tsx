@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { BreedModal } from './components/breed-modal.component';
-import { DogModal } from './components/dog-modal.component';
-import { Header } from './components/header.component';
-import { HomePage } from './pages/home.page';
-import { BreedPage } from './pages/breed.page';
-import { FavoritePage } from './pages/favorite.page';
+import { BreedModal } from './components/breed-modal';
+import { DogModal } from './components/dog-modal';
+import { Header } from './components/header';
+import { HomePage } from './pages/home';
+import { BreedPage } from './pages/breed';
+import { FavoritePage } from './pages/favorite';
 
 interface AppProps {}
 

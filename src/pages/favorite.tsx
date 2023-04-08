@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { v1 } from 'uuid';
-import { useFavoriteData } from '../api/use-favorite-data.hook';
-import { Button } from '../components/button.component';
-import { DogCard } from '../components/dog-card.component';
-import { Skeleton } from '../components/skeleton.component';
+import { useFavoriteData } from '../api/use-favorite-data';
+import { Button } from '../components/button';
+import { DogCard } from '../components/dog-card';
+import { Skeleton } from '../components/skeleton';
 
 interface FavoritePageProps {}
 

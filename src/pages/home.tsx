@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import { useRandomDogsData } from '../api/use-random-dog-data.hook';
+import { useRandomDogsData } from '../api/use-random-dog-data';
 import { v1 } from 'uuid';
-import { DogCard } from '../components/dog-card.component';
-import { Button } from '../components/button.component';
-import { Skeleton } from '../components/skeleton.component';
+import { DogCard } from '../components/dog-card';
+import { Button } from '../components/button';
+import { Skeleton } from '../components/skeleton';
 
 interface HomePageProps {}
 

@@ -1,7 +1,7 @@
 import { FC, useState, useEffect } from 'react';
 import { Carousel, Modal } from 'flowbite-react';
 import { useSearchParams } from 'react-router-dom';
-import { useRandomDogsData } from '../api/use-random-dog-data.hook';
+import { useRandomDogsData } from '../api/use-random-dog-data';
 import { filterSearchParams } from '../utils/searchParams';
 
 interface BreedModalProps {}

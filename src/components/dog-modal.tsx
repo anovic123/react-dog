@@ -3,9 +3,9 @@ import { Modal } from 'flowbite-react';
 import { useSearchParams } from 'react-router-dom';
 import { HeartIcon as HeartIconSolid } from '@heroicons/react/24/solid';
 import { HeartIcon as HeartIconOutline } from '@heroicons/react/24/outline';
-import { useSingleDogData } from '../api/use-single-dog-data.hook';
-import { useLikeApi } from '../api/use-like-api.hook';
-import { Button } from './button.component';
+import { useSingleDogData } from '../api/use-single-dog-data';
+import { useLikeApi } from '../api/use-like-api';
+import { Button } from './button';
 
 interface DogModalProps {}
 

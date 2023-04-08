@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { useBreedData } from '../api/use-breed-data.hook';
-import { Button } from '../components/button.component';
+import { useBreedData } from '../api/use-breed-data';
+import { Button } from '../components/button';
 import { useSearchParams } from 'react-router-dom';
 
 interface BreedPageProps {}
